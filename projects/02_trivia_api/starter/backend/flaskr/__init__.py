@@ -111,9 +111,9 @@ def create_app(test_config=None):
         try:
             body = request.get_json()
             search_string = body.get('searchTerm', None)
-            q_query = 'Question.query.filter'
-            q_ilike = 'Question.question.ilike'
-            questions = list(q_query(q_ilike("%"+search_string+"%")))
+
+            questions = list(Question.query.filter(Question.question.ilike("%"+search_string+"%")))
+
             current_questions = [question.format() for question in questions]
 
             if len(current_questions) == 0:
