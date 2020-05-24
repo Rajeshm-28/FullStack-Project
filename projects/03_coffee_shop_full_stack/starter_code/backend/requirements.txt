@@ -1,6 +1,6 @@
 astroid==2.3.3
 Click==7.0
-ecdsa==0.13.2
+ecdsa==0.13.3
 aniso8601==6.0.0
 Click==7.0
 Flask==1.0.3
